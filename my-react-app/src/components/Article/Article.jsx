@@ -3,23 +3,23 @@ import React from "react";
 
 import "./styles.css"
 
-export class Article extends React.Component {
-
-    render () {
+export function Article({title, provider, description, image}) {
+    
+   
         return (
             
             <article id="article">
-                <img className="Article-img" src={this.props.image} alt={this.props.title} />
+                <img className="Article-img" src={image} alt={title} />
 
                 <div className="article-infos">
-                    <h2>{this.props.title}</h2>
-                    <h3>{this.props.provider}</h3>
+                    <h2>{title}</h2>
+                    <h3>{provider}</h3>
 
-                    <p>{this.props.description}</p>
+                    <p>{description}</p>
 
                 </div>
         </article>
         )
-    }
+    
 }
 
